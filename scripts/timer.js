@@ -42,7 +42,7 @@ export default function Timer({
     function UpdateDisplay(newMinutes,seconds){
         
         newMinutes = newMinutes === undefined ? minutes : newMinutes
-        seconds = seconds === undefined ? seconds : 0
+        seconds = seconds === undefined ? 0 : seconds
 
         minutesDisplay.textContent = String(newMinutes).padStart(2 , "0") 
         secondsDisplay.textContent = String(seconds).padStart(2 , "0") 
