@@ -11,7 +11,7 @@ export default function Timer({
           let seconds = Number(secondsDisplay.textContent)
       
           if (minutes <= 0 & seconds <= 0){
-            resetControls()
+            reset()
             UpdateDisplay(minutes,0)
             return
           }
