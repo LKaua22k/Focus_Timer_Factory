@@ -12,7 +12,12 @@ let secondsDisplay = document.querySelector('.seconds')
 let minutes = Number(minutesDisplay.textContent)
 let timerTimeOut
 
-const controls = Controls()
+const controls = Controls({
+  buttonPlay,
+  buttonPause,
+  buttonSet,
+  buttonStop
+})
 
 const timer = Timer({
   minutesDisplay,
@@ -75,16 +80,12 @@ function UpdateMinutes(){
 }
 
 buttonPlay.addEventListener('click',function (){
-  buttonPlay.classList.add('hide')
-  buttonPause.classList.remove('hide')
-  buttonSet.classList.add('hide')
-  buttonStop.classList.remove('hide')
+  controls.Play()
   timer.countDown()
 } )
 
 buttonPause.addEventListener('click',function (){
-  buttonPlay.classList.remove('hide')
-  buttonPause.classList.add('hide')
+  controls.Pause()
   clearInterval(timerTimeOut)
 } )
 
@@ -94,7 +95,7 @@ buttonSet.addEventListener('click', function(){
 })
 
 buttonStop.addEventListener('click', function(){
-  resetControls()
+  controls.reset()
   timer.reset()
 })
 
