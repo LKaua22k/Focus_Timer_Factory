@@ -1,7 +1,6 @@
 export default function Timer({
     minutesDisplay,
     secondsDisplay,
-    timerTimeOut,
     resetControls,
     minutes
 }) {
