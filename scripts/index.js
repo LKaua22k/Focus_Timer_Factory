@@ -21,7 +21,6 @@ const controls = Controls({
 const timer = Timer({
   minutesDisplay,
   secondsDisplay,
-  timerTimeOut,
   resetControls: controls.reset(),
   minutes
 })
