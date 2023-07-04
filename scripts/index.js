@@ -41,7 +41,7 @@ function UpdateMinutes(){
 }
 
 buttonPlay.addEventListener('click',function (){
-  sound.pressButton
+  sound.pressButton()
   controls.Play()
   timer.countDown()
 } )
@@ -49,16 +49,18 @@ buttonPlay.addEventListener('click',function (){
 buttonPause.addEventListener('click',function (){
   controls.Pause()
   timer.hold()
+  sound.pressButton()
 } )
 
 buttonSet.addEventListener('click', function(){
-  sound.pressButton
+  sound.pressButton()
   UpdateMinutes()
 })
 
 buttonStop.addEventListener('click', function(){
   controls.reset()
   timer.reset()
+  sound.pressButton()
 })
 
 buttonSoundOn.addEventListener('click', function(){
