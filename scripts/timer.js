@@ -15,23 +15,26 @@ export default function Timer({
           let seconds = Number(secondsDisplay.textContent)
           let isFinish = minutes <= 0 && seconds <= 0
         
+          UpdateDisplay(minutes,0)
 
           if (isFinish){
             resetControls()
-            UpdateDisplay(minutes,0)
+            UpdateDisplay()
             Sounds().finishbTimer()
             return
           }
       
       
           if(seconds <= 0){
-            seconds = 60
+            seconds = 60    
             
             --minutes
           }
+
+          console.log(seconds)
       
           //  secondsDisplay.textContent = String(seconds -1).padStart(2 , "0")
-          UpdateDisplay(minutes,seconds -1)
+          UpdateDisplay(minutes,String(seconds -1))
           countDown()
         }, 1000)
     }

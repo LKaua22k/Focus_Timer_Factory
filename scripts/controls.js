@@ -4,6 +4,7 @@ export default function Controls({
     buttonSet,
     buttonStop
 }){
+    
     function reset(){
         buttonPlay.classList.remove("hide")
         buttonPause.classList.add("hide")
