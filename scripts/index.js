@@ -66,11 +66,11 @@ buttonStop.addEventListener('click', function(){
 buttonSoundOn.addEventListener('click', function(){
   buttonSoundOn.classList.add('hide')
   buttonSoundOff.classList.remove('hide')
-  sound.bgAudio.pause()
+  sound.pauseBg()
 })
 
 buttonSoundOff.addEventListener('click', function(){
   buttonSoundOn.classList.remove('hide')
   buttonSoundOff.classList.add('hide')
-  sound.bgAudio.play()
+  sound.playBg()
 })

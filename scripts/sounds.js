@@ -20,9 +20,18 @@ export default function Sounds(){
         kitchenTimer.play()
     }
 
+    function playBg(){
+        bgAudio.play()
+    }
+
+    function pauseBg(){
+        bgAudio.pause()
+    }
+
     return{
         pressButton,
         finishbTimer,
-        bgAudio
+        playBg,
+        pauseBg
     }
 }
