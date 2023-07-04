@@ -19,6 +19,7 @@ export default function Timer({
           if (isFinish){
             reset()
             UpdateDisplay(minutes,0)
+            Sounds().finishbTimer()
             return
           }
       
